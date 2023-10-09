@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerRotateService : BasePlayerService
 {
-    public PlayerRotateService(IPlayerModel model) : base(model)
+    public PlayerRotateService(IPlayerModel model, IPlayerPresenter presenter) : base(model, presenter)
     {
     }
 

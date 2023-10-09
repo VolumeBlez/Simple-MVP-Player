@@ -15,10 +15,7 @@ public class PlayerSetup : MonoBehaviour
     {
         IPlayerModel model = new PlayerModel(_data, _controller, _rotateObject, _camera);
 
-        PlayerMoveService moveService = new(model);
-        PlayerRotateService rotateService = new(model);
-
-        IPlayerPresenter presenter = new PlayerPresenter(moveService, rotateService);
+        IPlayerPresenter presenter = new PlayerPresenter(model);
 
         foreach (BasePlayerView view in _views)
         {

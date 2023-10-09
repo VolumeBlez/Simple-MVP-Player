@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMoveService : BasePlayerService
 {
-    public PlayerMoveService(IPlayerModel model) : base(model)
+    public PlayerMoveService(IPlayerModel model, IPlayerPresenter presenter) : base(model, presenter)
     {
     }
 

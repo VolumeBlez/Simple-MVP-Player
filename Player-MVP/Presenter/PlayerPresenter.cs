@@ -2,10 +2,12 @@ public class PlayerPresenter : IPlayerPresenter
 {
     public PlayerRotateService RotateService { get; }
     public PlayerMoveService MoveService { get; }
+    public PlayerInteractService InteractService { get; }
 
-    public PlayerPresenter(PlayerMoveService moveService, PlayerRotateService rotateService)
+    public PlayerPresenter(IPlayerModel model)
     {
-        RotateService = rotateService;
-        MoveService = moveService;
+        RotateService = new(model, this);
+        MoveService = new(model, this);
+        InteractService = new(model, this);
     }
 }
